@@ -1,0 +1,96 @@
+.carousel-caption {
+top: 50%;
+transform: translateY(-50%);
+
+    * {
+        color: $white;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.carousel-indicators li {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border: 2px solid theme-color(primary);
+    color: theme-color(primary);
+    border-radius: 50%;
+    opacity: 1;
+    font-size: 12px;
+
+    &:hover, &:focus, &:active {
+        background-color: theme-color(primary);
+    }
+}
+
+.carousel-control-prev {
+    transform: translate(-50%, -50%);
+}
+
+.carousel-control-next {
+    transform: translate(50%, -50%);
+}
+
+.testimonial-slide {
+    margin-bottom: 22px;
+
+    .slick-prev, .slick-next {
+        top: calc(100% + 11px);
+        width: 25px;
+        height: 25px;
+        &::before {
+            font-family: "Material Design Icons";
+            font-size: 25px;
+            color: $black;
+        }
+    }
+
+    .slick-prev {
+        left: -15px;
+        &::before {
+            content: "\f141";
+        }
+    }
+    .slick-next {
+        right: -15px;
+        &::before {
+            content: "\f142";
+        }
+    }
+}
+
+.testimonial-control{
+    .testimonial-user{
+        img {
+            width: 54px;
+            height: 54px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    .slick-slide:not(.slick-current) {
+        .testimonial-user{
+            img {
+                transform: scale(0.85);
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.slick-slide {
+    &:focus {
+        outline: none;
+    }
+}
